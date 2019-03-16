@@ -30,7 +30,8 @@ class Scholar(object):
         self.saida.append(
           {
             'titulo' : dados['title'],
-            'ano' : dados['year']
+            'ano' : dados['year'],
+            'resumo' : dados['abstract']
           }
         )
 
@@ -44,7 +45,8 @@ class Scholar(object):
             self.saida.append(
               {
                 'titulo' : dados['title'],
-                'ano' : dados['year']
+                'ano' : dados['year'],
+                'resumo' : dados['abstract']
               }
             )
           proximo = req.links    
