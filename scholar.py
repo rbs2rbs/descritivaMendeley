@@ -151,11 +151,13 @@ def grafico(t,dados):
     plt.show()
   
   elif t == "palavras-chave":
+
     palavra_filtrado = []
 
     for palavra in dados.saida:
       if "palavras" in palavra.keys():
-        palavra_filtrado.append(palavra['palavras'])
+        for p in palavra['palavras']:
+          palavra_filtrado.append(p.lower())
 
     palavra_filtrado = collections.Counter(palavra_filtrado).most_common()
 
